@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+		<meta charset="UTF-8"/>
+		<title> Rede de Bibliotecas do IFMA</title>
+		<link rel="stylesheet" type="text/css" href="css\estilo.css"/>
+
+</head>
+<script src="javascript/funcoes.js"></script>
+<body>
+<img id="logoifma" src = "imagens\ifma_novo.jpg"/>
+<div id="interface">
+		
+	<header id="cabecalho">
+	<hgroup>
+	<h1>REDE&nbsp;&nbsp;DE&nbsp;&nbsp;BIBLIOTECAS&nbsp;&nbsp;DO&nbsp;&nbsp;IFMA </h1>
+	<h2>Ficha Catalográfica</h2>
+	</hgroup>
+	
+	
+	
+<nav id="menu">	
+	<h1>Menu Principal</h1>
+	<ul>
+		<li><a href="index.html">Home</a></li></br>
+		<li><a href="specs.html">Especificações</a></li></br>
+		<li><a href="fotos.html">Fotos</a></li></br>
+		<li><a href="multimidia.html">Multimídia</a></li></br>
+		<li><a href="Ficha Catalográfica.html">Ficha Catalográfica</a></li></br>
+	</ul>
+</nav>
+	</header>
+			<section id="corpo-full">
+					<article id="noticia-principal">
+						<header id="cabecalho-artigo">
+							<hgroup>
+								<h1>Para obter sua ficha catalográfica > Preencha o formulário a seguir</h1>
+																
+							</hgroup>
+						</header>
+								<!-- Marcação dos Dados do autor -->
+							<form method="post" id="fContato" action="mailto:saulo.ex@hotmal.com" oninput="calc_total();">
+							<fieldset id="usuario">
+								<legend>Identificação do Autor</legend>
+								<p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Ex: Carlos Drumond de"></p>
+								<p><label for="cNome">Sobrenome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Ex: Andrade"></p>
+							</fieldset>
+							
+							<!-- Marcação dos Dados da publicação -->
+							<fieldset id="endereco">
+							<legend>Dados da publicação</legend>
+							<p><label for="cNome">Título do Trabalho:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50"></p>
+								<p><label for="cNome">Subtítulo:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Se houver"></p>
+								<p><label for="cNum">Ano de publicação:</label><input type="number" name="tNum" id="cNum" min="2010" max="9999"></p>
+																	
+									<!-- Marcação do Oriendador > Dados da publicação-->
+									<fieldset id="sexo">
+										<legend>Orientador(a)</legend>
+										<p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Nome completo"><input type="checkbox" name="tPed" id="cPed"/><label for="cPed">Marque se Orientadora</label></p>
+										
+										<p><label for="cEst">Titulação:</label>
+												<select name="tEst" id="cEst">
+													<option value="Selec">Selecione</option>
+													<option value="Gd">Graduado</option>
+													<option value="Es">Especialista</option>
+													<option value="Me">Mestre</option>
+													<option value="Dr">Doutor</option>
+												</select></p>
+									</fieldset>
+									
+									<!-- Marcação do Cooriendador > Dados da publicação -->
+									<fieldset id="sexo">
+										<legend>Coorientador(a)</legend>
+										<p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Nome completo"><input type="checkbox" name="tPed" id="cPed"/><label for="cPed">Marque se Coorientadora</label></p>
+										<p><label for="cEst">Titulação:</label>
+												<select name="tEst" id="cEst">
+													<option value="Selec">Selecione</option>
+													<option value="Gd">Graduado</option>
+													<option value="Es">Especialista</option>
+													<option value="Me">Mestre</option>
+													<option value="Dr">Doutor</option>
+												</select></p>
+									</fieldset>
+									
+									<!-- Marcação da Descrição Física > Dados da publicação -->									
+									<fieldset id="mensagem">
+									<legend>Descrição física</legend>
+									<p>Marque o tipo do trabaho:<input type="radio" name="tSexo" id="cMasc" checked> <label for="cMasc">Monografia</label><input type="radio" name="tSexo" id="cFem"> <label for="cFem">Dissertação</label>	<input type="radio" name="tSexo" id="cFem"> <label for="cFem">Tese</label></p>
+										<p><label for="cNfol">Número de Folhas:</label><input type="number" name="tNum" id="cNfol" min="10" max="499"></p>
+										<p><label for="cIlus">Ilustração:</label>
+												<select name="tIlus" id="cIlus">
+													<option value="Selec">Selecione</option>
+													<option value="Np">Não possui</option>
+													<option value="Colori">Coloridas</option>
+													<option value="Pbr">Preto e branco</option>
+												</select></p>
+										<p><label>Fonte:</label>
+													<select name="fonte" id="tipodefonte" class="styled-select-fonte">
+														<option selected="selected" value="fonte">Selecione</option>
+														<option value="times"> Times New Roman </option>
+														<option value="arial"> Arial</option>
+													</select></p>	
+									</fieldset>								
+							</fieldset>
+							
+							
+							
+							<fieldset id="pedido">
+							<legend>Quero um Google Glass</legend>
+								<p><input type="checkbox" name="tPed" id="cPed"/><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+								<p><label for="">Cor:</label><input type="color" name="tCor" id="cCor"></p>
+								<p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="99"></p>
+								<p><label for="cTot">Preço Total: R$<input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+							</fieldset>
+							
+							<input type="image" name="tEnviar" src="imagens/botao-enviar.png">
+							</form>
+					</article>
+				</section>
+			<footer id="rodape">
+			<p>Copyright &copy;&nbsp;&nbsp;2018 - &nbsp;&nbsp;Saulo Pimentel <br/> <a href="http://facebook.com/saulo" target="_blank"> Facebook</a>| Twitter</p>
+		</footer>
+	</div>
+	</body>
+</html>
